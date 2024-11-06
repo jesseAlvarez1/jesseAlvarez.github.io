@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Cybersecurity Report Navigation</title>
+  <style>
+    body {
+      display: flex;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+      width: 25%;
+      height: 100vh;
+      background-color: #f0f0f0;
+      padding: 20px;
+      box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .content {
+      width: 75%;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .section-link {
+      display: block;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #e0e0e0;
+      text-decoration: none;
+      color: #000;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .section-link:hover {
+      background-color: #c0c0c0;
+    }
+
+    .report-section {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Table of Contents</h2>
+    <a href="#" class="section-link" onclick="showSection('title-page')">Title Page</a>
+    <a href="#" class="section-link" onclick="showSection('introduction')">1. Introduction</a>
+    <a href="#" class="section-link" onclick="showSection('methodology')">2. Methodology and Tools Used</a>
+    <a href="#" class="section-link" onclick="showSection('findings')">3. Findings</a>
+    <a href="#" class="section-link" onclick="showSection('analysis')">4. Analysis</a>
+    <a href="#" class="section-link" onclick="showSection('conclusion')">5. Conclusion</a>
+    <a href="#" class="section-link" onclick="showSection('additional-info')">6. Additional Information</a>
+    <a href="#" class="section-link" onclick="showSection('integrated-traceroute')">7. Integrated Traceroute and ASN Analysis</a>
+    <a href="#" class="section-link" onclick="showSection('geolocation')">8. Geolocation and Physical Infrastructure Details</a>
+    <a href="#" class="section-link" onclick="showSection('social-media')">9. Social Media and Professional Profiles</a>
+    <a href="#" class="section-link" onclick="showSection('domain-registration')">10. Domain Registration and Ownership Details</a>
+    <a href="#" class="section-link" onclick="showSection('network-info')">11. Additional Network and Infrastructure Information</a>
+    <a href="#" class="section-link" onclick="showSection('citations')">12. Citations</a>
+  </div>
+  <div class="content">
+    <div id="title-page" class="report-section">
+      <h1>Southern Illinois University</h1>
+      <h2>Cybersecurity Analysis of IP Address 203.188.252.24</h2>
+      <p>Reported by: Justin Brown, Dominick Thompson, Jesse Alvarez, Julian McPhail, Michael Harris, Sam Daly</p>
+      <p>17 October 2024</p>
+    </div>
+    <div id="introduction" class="report-section">
+      <h2>1. Introduction</h2>
+      <p>This cybersecurity analysis report focuses on IP address 203.188.252.24, which is part of the ISN Network, an Internet Service Provider (ISP) based in Dhaka, Bangladesh. The primary objective of this analysis is to evaluate the security posture, infrastructure setup, and potential vulnerabilities associated with this specific IP address. By conducting a thorough examination of network configurations, administrative ownership, and routing paths, the report aims to identify any security gaps and provide recommendations to enhance the overall cybersecurity framework.</p>
+      <p>Scope of the Analysis:</p>
+      <ul>
+        <li>IP Address and Ownership Verification: Identification of the ownership, administrative contacts, and organizational roles linked to IP 203.188.252.24.</li>
+        <li>Network and Infrastructure Security: Assessment of the network infrastructure, including port scans, traceroute analysis, and Autonomous System Number (ASN) lookups to understand the broader network environment.</li>
+        <li>Geolocation and Physical Infrastructure: Mapping of physical locations associated with the IP address, including hosting facilities, office locations, and data center associations.</li>
+        <li>Social Media and Professional Profiles: Investigation of relevant LinkedIn and other social media profiles to identify personnel and administrative roles responsible for maintaining and supporting the IP and its infrastructure.</li>
+        <li>Domain and Hosting Relationships: Examination of domain registrations, associated domains, and linked hostnames to assess operational ties between ISN and other network providers or subsidiaries.</li>
+        <li>Autonomous System Number (ASN) Relationships: Analysis of ASN peer and upstream relationships for AS9832, the ASN associated with ISN Network, to evaluate potential security impacts on data flow, latency, and cross-border data transit.</li>
+      </ul>
+    </div>
+    <div id="methodology" class="report-section">
+      <h2>2. Methodology and Tools Used</h2>
+      <p>A comprehensive set of OSINT tools were utilized to gather and analyze data related to IP address 203.188.252.24:</p>
+      <ul>
+        <li>WHOIS: Used to retrieve registration details for both the IP address and associated domains, providing information on ownership, administrative contacts, and technical contacts.</li>
+        <li>ASN Lookup Tools: Platforms like asnlookup.com and bgp.tools were employed to gather information about the Autonomous System Number (ASN) AS9832, including upstream and downstream relationships.</li>
+        <li>Shodan: Leveraged for performing port scans and identifying open ports, services running on the IP, and potential vulnerabilities exposed to the internet.</li>
+        <li>Nmap: Conducted additional port scans to verify open ports and enumerate services, offering a deeper insight into the security posture of the IP.</li>
+        <li>Traceroute: Used to map the network path from the source to the target IP, identifying intermediate hops and analyzing the routing infrastructure.</li>
+        <li>CentralOps and Domain Dossier: Utilized to compile detailed domain information, including historical WHOIS data, DNS records, and associated hostnames.</li>
+        <li>Social Media Platforms: LinkedIn and Instagram were searched to identify professional profiles and social media accounts linked to key personnel within ISN Network and Level3 Carrier Limited.</li>
+      </ul>
+      <p>Data Collection and Analysis Process:</p>
+      <ul>
+        <li>Data Aggregation: Collected raw data from various sources including WHOIS records, ASN databases, port scanning results, traceroute outputs, and social media profiles.</li>
+        <li>Data Verification: Cross-referenced information from multiple sources to ensure accuracy and reliability of the data.</li>
+        <li>Data Synthesis: Integrated findings from different tools and methods to form a cohesive understanding of the network infrastructure, ownership, and potential security vulnerabilities.</li>
+        <li>Reporting: Structured the analysis into organized sections, aligning with the report’s outline to present findings logically and comprehensively.</li>
+      </ul>
+      <p>Limitations:</p>
+      <ul>
+        <li>Dynamic IP Allocation: IP addresses may change ownership or be reassigned, potentially leading to outdated information.</li>
+        <li>Incomplete Data: Some administrative contact details may be masked or unavailable, limiting the depth of ownership analysis.</li>
+        <li>Service Limitations: Tools like Shodan and Nmap rely on active responses from services, which may be configured to limit exposure, thus missing certain vulnerabilities.</li>
+      </ul>
+    </div>
+    <div id="findings" class="report-section">
+      <h2>3. Findings</h2>
+      <h3>3.1. IP Address Identification and Geolocation</h3>
+      <p>IP Address: 203.188.252.24<br>
+      Organization: ISN Network<br>
+      Country: Bangladesh<br>
+      City: Dhaka<br>
+      Geolocation Coordinates: Approximately 23.710394° N latitude and 90.407112° E longitude.<br>
+      Company Information: Level3 Carrier Limited:<br>
+      Name: Level3 Carrier Limited<br>
+      Employee Size: 100-200 employees<br>
+      Founded: 2012<br>
+      Website: Level3 Carrier<br>
+      Office Location: 9 Rd 113, Dhaka, Dhaka Division, Bangladesh (as listed on Google Maps) and Plot 11 Rd No 113/A, Dhaka 1212, Bangladesh (as per company website).</p>
+      <h3>3.2. Ownership and Contact Information</h3>
+      <p>Ownership: ISN Network<br>
+      Autonomous System Number (ASN): AS9832<br>
+      Administrative Contacts:<br>
+      H M Faruque Ahammad<br>
+      Position: Senior System Administrator<br>
+      Email: faruque@bangla.net<br>
+      Phone: +880-2-8322785<br>
+      Sabir Sumon Ahmed<br>
+      Position: Senior Manager, Sales and Marketing<br>
+      Email: shoque.isn@bangla.net<br>
+      Phone: +880-2-832842785</p>
+      <h3>3.3. Network Information</h3>
+      <p>IP Block: 203.188.252.0/24<br>
+      Network Name: ISN-BD<br>
+      Status: ALLOCATED NON-PORTABLE<br>
+      Maintained By: MAINT-BD-ISN<br>
+      Last Modified: 30 June 2009</p>
+      <h3>3.4. Port Scan Results (Nmap)</h3>
+      <p>Open Ports Identified:<br>
+      25 (SMTP): Indicates the presence of an SMTP server, likely handling email services.<br>
+      80 (HTTP): Suggests a web server operating over HTTP.<br>
+      111 (Portmapper/RPC): Can expose Remote Procedure Call services, potentially increasing vulnerability.<br>
+      443 (HTTPS): Indicates a secure web server operating over HTTPS.<p>
+      993 (IMAPS): Secure IMAP server for email retrieval.<br>
+      995 (POP3S): Secure POP3 server for email retrieval.<br>
+      3306 (MySQL): Points to a MySQL database server.<br>
+      8443 (Alternative HTTPS): Often used for secure web services or administrative interfaces.</p>
+      <h3>3.5. Traceroute Analysis</h3>
+      <p>Traceroute Path to 203.188.252.24:<br>
+      ???<br>
+      10.74.132.63<br>
+      138.197.248.246 - DigitalOcean, LLC<br>
+      143.244.192.170 - DigitalOcean, LLC<br>
+      143.244.225.212 - DigitalOcean, LLC<br>
+      143.244.225.139 - DigitalOcean, LLC<br>
+      10gigabitethernet1-2.core1.nyc6.he.net (198.32.160.61) - TELEHOUSE International Corp. of America<br>
+      port-channel4.core2.nyc4.he.net (184.105.64.177) - Hurricane Electric<br>
+      ???<br>
+      ???<br>
+      ???<br>
+      level3-carrier-limited.e0-50.switch1.sin1.he.net (184.104.208.66) - Level3 Carrier Limited (Reported to be in Shenzhen, Guangdong or Singapore)<br>
+      103.124.224.2 - Level3 Carrier Limited<br>
+      103.124.224.131 - Level3 Carrier Limited<br>
+      103.124.224.9 - Level3 Carrier Limited (Moved into Bangladesh)<br>
+      103.124.224.11 - Level3 Carrier Limited<br>
+      103.230.18.111 - Level3 Carrier Limited<br>
+      mx2.bangla.net (203.188.252.24) - ISN Network</p>
+    </div>
+    <div id="analysis" class="report-section">
+      <h2>4. Analysis</h2>
+      <p>The comprehensive findings from the analysis of IP address 203.188.252.24 reveal a complex and interconnected network infrastructure managed by ISN Network in Bangladesh. The presence of multiple open ports, including SMTP, HTTP/S, and MySQL, indicates that the IP serves as a critical node for email and web services. However, the exposure of services like Portmapper (port 111) and outdated web server software (Apache HTTP Server 2.2.15) presents potential security vulnerabilities that could be exploited by malicious actors.</p>
+      <p>Routing and Network Dependencies:<br>
+      The traceroute analysis highlights a multi-hop path involving both local and international ISPs, notably Level3 Carrier Limited, Hurricane Electric, and DigitalOcean. This routing complexity introduces latency and potential points of interception, especially with cross-border data transit.</p>
+      <p>Key Vulnerabilities Identified:</p>
+      <ul>
+        <li>Open Ports: Services exposed on ports 25, 80, 443, 111, 993, 995, 3306, and 8443 increase the attack surface.</li>
+        <li>Outdated Software: Use of Apache HTTP Server 2.2.15 may lack recent security patches, making it vulnerable to known exploits.</li>
+        <li>Portmapper Exposure: RPC services exposed on port 111 can be exploited for unauthorized access or denial-of-service attacks.</li>
+        <li>Routing Dependencies: Reliance on multiple ISPs and international carriers introduces risks related to data interception and service disruptions.</li>
+      </ul>
+      <p>Recommendations:</p>
+      <ul>
+        <li>Port Security: Implement strict firewall rules to limit access to essential ports. Disable unnecessary services, especially Portmapper (port 111), to reduce exposure.</li>
+        <li>Software Updates: Upgrade web server software to the latest stable versions to ensure security patches are applied and vulnerabilities are mitigated.</li>
+        <li>Network Monitoring: Enhance network monitoring to detect and respond to suspicious activities promptly. Utilize intrusion detection systems (IDS) to identify potential threats.</li>
+        <li>Routing Policies: Review and optimize routing policies to minimize latency and reduce dependency on high-risk third-party providers.</li>
+        <li>Personnel Training: Conduct regular cybersecurity training for key personnel to ensure adherence to best practices and awareness of emerging threats.</li>
+        <li>Incident Response Plan: Develop and maintain a robust incident response plan to address potential security breaches effectively.</li>
+      </ul>
+    </div>
+    <div id="conclusion" class="report-section">
+      <h2>5. Conclusion</h2>
+      <p>The cybersecurity assessment of IP address 203.188.252.24 within the ISN Network reveals a robust yet vulnerable infrastructure. While the network leverages multiple ISPs and advanced routing strategies to ensure connectivity and operational efficiency, the presence of several open ports and outdated software components introduces significant security risks. The centralized geolocation of infrastructure in Dhaka offers operational advantages but also concentrates vulnerability to localized threats.</p>
+      <p>Recommendations for Mitigation:</p>
+      <ul>
+        <li>Enhance Port Security: Implement strict firewall rules and disable unnecessary services to minimize exposed ports.</li>
+        <li>Update Software: Upgrade web server software to the latest stable versions to ensure vulnerabilities are patched.</li>
+        <li>Strengthen Network Monitoring: Deploy advanced network monitoring tools to detect and respond to suspicious activities in real-time.</li>
+        <li>Optimize Routing Policies: Review and optimize routing policies to reduce latency and dependency on high-risk third-party providers.</li>
+        <li>Invest in Personnel Training: Regularly train key personnel on cybersecurity best practices and emerging threats to bolster the organization’s defensive capabilities.</li>
+      </ul>
+    </div>
+    <div id="additional-info" class="report-section">
+      <h2>6. Additional Information</h2>
+      <p>This section includes supplementary data, logs, and observations that support the main findings of the report. Detailed traceroute logs, port scan outputs, WHOIS records, and screenshots from various OSINT tools are provided to offer in-depth context and verification of the analysis conducted.</p>
+    </div>
+    <div id="integrated-traceroute" class="report-section">
+      <h2>7. Integrated Traceroute and ASN Analysis</h2>
+      <h3>7.1. Traceroute Analysis</h3>
+      <p>The traceroute to IP 203.188.252.24 reveals a complex routing path involving multiple hops through various ISPs and international carriers. Key observations include:</p>
+      <ul>
+        <li>DigitalOcean, LLC: Multiple hops through DigitalOcean indicate the use of cloud infrastructure for hosting services.</li>
+        <li>Hurricane Electric: The presence of Hurricane Electric’s infrastructure suggests robust backbone connectivity.</li>
+        <li>Level3 Carrier Limited: Significant routing through Level3’s network underscores its role as a primary carrier for data transit.</li>
+        <li>International Hops: Hops reported to be in Shenzhen, Guangdong, or Singapore indicate cross-border data transit, which may introduce latency and security risks.</li>
+      </ul>
+      <h3>7.2. ASN Peer Relationships</h3>
+      <p>ASN9832 (ISN-AS-AP) maintains peer relationships with several significant ASNs, including:</p>
+      <ul>
+        <li>AS136808: One Bank Limited</li>
+        <li>AS136813: NCC Bank, Bangladesh</li>
+        <li>AS139901: Apple Communication Ltd</li>
+        <li>AS140684: Bangladesh Internet Exchange Trust</li>
+        <li>AS140887: Mercantile Bank Limited</li>
+      </ul>
+      <h3>7.3. Implications</h3>
+      <p>The integrated traceroute and ASN analysis highlight several implications:</p>
+      <ul>
+        <li>Latency and Performance: Multiple international hops can introduce latency, affecting the performance of services hosted on IP 203.188.252.24.</li>
+        <li>Security Risks: Cross-border data transit increases exposure to potential interception and cyber threats, necessitating robust encryption and security measures.</li>
+      </ul>
+    </div>
+    <div id="geolocation" class="report-section">
+      <h2>8. Geolocation and Physical Infrastructure Details</h2>
+      <h3>8.1. Primary Geolocation</h3>
+      <p>The primary geolocation of IP 203.188.252.24 is confirmed within Dhaka, Bangladesh. The geolocation aligns with the registered address of ISN Network Limited at Plot 11 Rd No 113/A, Dhaka 1212, Bangladesh.</p>
+      <h3>8.2. Google Maps Links</h3>
+      <p>ISN Network Office: Plot 11 Rd No 113/A, Dhaka 1212, Bangladesh<br>
+      Level3 Carrier Limited HQ: 9 Rd 113, Dhaka, Dhaka Division, Bangladesh</p>
+      <h3>8.3. Additional Locations</h3>
+      <p>Additional infrastructure sites include Rackray Data Centers and Level3 Carrier Limited’s facilities, all situated within the central business district of Dhaka. These locations are strategically positioned to support high-speed data transmission and robust network operations.</p>
+    </div>
+    <div id="social-media" class="report-section">
+      <h2>9. Social Media and Professional Profiles</h2>
+      <h3>9.1. LinkedIn Profiles</h3>
+      <p>Ahmed Junayed: Managing Director at Level3 Carrier Limited<br>
+      LinkedIn: <a href="https://www.linkedin.com">Ahmed Junayed</a><br>
+      Role: Oversees network operations and strategic initiatives, ensuring alignment with industry best practices and security standards.</p>
+      <h3>9.2. Additional Social Media Information</h3>
+      <p>Instagram profiles linked to key personnel, such as Ahmed Junayed, highlight professional achievements and organizational updates, providing additional context to their roles and responsibilities.</p>
+    </div>
+    <div id="domain-registration" class="report-section">
+      <h2>10. Domain Registration and Ownership Details</h2>
+      <h3>10.1. WHOIS Lookup</h3>
+      <p>Domain: bangla.net<br>
+      Registrar: OnlineNIC, Inc.<br>
+      Registration Date: 25 May 1996<br>
+      Expiry Date: 24 May 2025<br>
+      Status: clientTransferProhibited<br>
+      Name Servers: dns.bangla.net, ns1.bangla.net, ns2.bangla.net<br>
+      Registrant Organization: Information Services Network Limited<br>
+      Registrant Address: TMC Building (4/F), 52 New Eskaton Road, Dhaka, 1000, Bangladesh<br>
+      Registrant Email: nayon.isn@bangla.net.bd</p>
+      <h3>10.2. Associated Domains</h3>
+      <p>mx2.bangla.net: Primary Mail Exchanger (MX) for handling email traffic.<br>
+      webmail.bangla.net: Secure webmail interface accessed via HTTPS.<br>
+      dns.bangla.net, ns1.bangla.net, ns2.bangla.net: Authoritative name servers responsible for DNS resolution.</p>
+    </div>
+    <div id="network-info" class="report-section">
+      <h2>11. Additional Network and Infrastructure Information</h2>
+      <h3>11.1. Rackray Data Center Locations</h3>
+      <p>Rackray Data Centers:<br>
+      Located strategically across Dhaka, Bangladesh, providing high availability and redundancy for network services.<br>
+      Facilities equipped with advanced security measures, including biometric access controls, surveillance systems, and environmental monitoring.</p>
+      <h3>11.2. Rackray ASN Lookup</h3>
+      <p>ASN Details:<br>
+      ASN Number: AS58682<br>
+      ASN Name: Level3 Carrier Limited<br>
+      Registrar: APNIC<br>
+      Country: Bangladesh</p>
+      <h3>11.3. Additional Observations</h3>
+      <p>Level3 Carrier Limited’s Role: As a primary upstream provider, Level3 Carrier Limited ensures robust connectivity and network performance for ISN Network.</p>
+    </div>
+    <div id="citations" class="report-section">
+      <h2>12. Citations</h2>
+      <p>All data and information presented in this report have been sourced from reliable OSINT tools and publicly available databases. The following references were utilized to compile and verify the findings:</p>
+      <ul>
+        <li>WHOIS Records: Internic. “WHOIS Lookup.” Accessed October 17, 2024. https://whois.internic.net.</li>
+        <li>OnlineNIC, Inc. “WHOIS Lookup.” Accessed October 17, 2024. http://www.onlinenic.com.</li>
+        <li>ASN Lookup Tools: ASNlookup.com. “ASN Lookup.” Accessed October 17, 2024. https://asnlookup.com.</li>
+        <li>BGP Tools. “BGP ASN Tools.” Accessed October 17, 2024. https://bgp.tools.</li>
+        <li>Shodan. “Shodan.” Accessed October 17, 2024. https://www.shodan.io.</li>
+        <li>Nmap Project. “Nmap: Network Mapper.” Accessed October 17, 2024. https://nmap.org.</li>
+        <li>Traceroute.org. “Traceroute.” Accessed October 17, 2024. https://traceroute.org.</li>
+        <li>CentralOps. “Domain Dossier.” Accessed October 17, 2024. https://centralops.net/co/DomainDossier.aspx.</li>
+        <li>LinkedIn. “LinkedIn.” Accessed October 17, 2024. https://www.linkedin.com.</li>
+        <li>Instagram. “Instagram.” Accessed October 17, 2024. https://www.instagram.com.</li>
+        <li>Google Maps: Google. “Google Maps Locations.” Accessed October 17, 2024. https://www.google.com/maps.</li>
+        <li>AbuseIPDB. “AbuseIPDB.” Accessed October 17, 2024. https://www.abuseipdb.com.</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    function showSection(sectionId) {
+      // Hide all report sections
+      const sections = document.querySelectorAll('.report-section');
+      sections.forEach((section) => {
+        section.style.display = 'none';
+      });
+
+      // Display the selected section
+      const selectedSection = document.getElementById(sectionId);
+      if (selectedSection) {
+        selectedSection.style.display = 'block';
+      }
+    }
+
+    // Show the title page by default on page load
+    window.onload = function () {
+      showSection('title-page');
+    };
+  </script>
+</body>
+</html>
